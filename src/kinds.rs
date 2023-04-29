@@ -1,4 +1,4 @@
-//! here are all the types <br>
+//! Here are all the types <br>
 //! that this crate uses
 
 pub use self::maller::*;

@@ -1,4 +1,4 @@
-//! this crate allows to call closures <br>
+//! This crate allows to call closures <br>
 //! that user set for match case
 
 pub use kinds::*;

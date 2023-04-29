@@ -1,8 +1,13 @@
 [package]
+version = "0.1.0"
 name = "maller"
 description="a rust library crate that calls closures depending on the input data"
-version = "0.1.0"
+authors=["MAKA <mmkgdev@gmail.com>"]
+keywords=["closures","matches","utilities","call"]
+categories=["rust-patterns","config","data-structures"]
+license="MIT OR Unlicense"
 edition = "2021"
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
