@@ -5,6 +5,7 @@ description="a rust library crate that calls closures depending on the input dat
 authors=["MAKA <mmkgdev@gmail.com>"]
 keywords=["closures","matches","utilities","call"]
 categories=["rust-patterns","config","data-structures"]
+readme="README.md"
 license="MIT OR Unlicense"
 edition = "2021"
 

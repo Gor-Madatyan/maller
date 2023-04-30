@@ -7,7 +7,6 @@ use std::hash::Hash;
 pub(crate) type Fput<'a,'b,T,R>= Box<dyn FnMut(&'b T)->R+'a>;
 
 ///Type that have a inner closure<br>
-/// ___
 /// if Input<...> impl From<**TYPE**> then **TYPE** can be used as input closure
 pub struct Input<'a,'b,T,R>
     where T:Eq+Hash
@@ -37,7 +36,6 @@ impl<'a,'b,T,R>  Input<'a,'b,T,R>
     ///[1]:crate::utils::input
     ///[2]:crate::new_input
     ///
-    ///___
     /// # Examples
     ///
     ///```

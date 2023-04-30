@@ -20,7 +20,6 @@ impl<'a,'b,T,R> Maller<'a,'b,T,R>
         T:Eq+Hash, {
 
     ///Allows to create new default Maller,
-    /// ___
     /// you must enter the type, or add a value
     /// # Examples
     /// ```
@@ -35,12 +34,10 @@ impl<'a,'b,T,R> Maller<'a,'b,T,R>
 
     ///Allows to call a suitable closure by key,
     /// the ref on key have to pass to closure.
-    /// ___
     /// return `Some(R)` if closure is found
     ///else `None`
     ///
     /// # Examples
-    ///```
     /// use maller::{input, Maller};
     /// let mut con=0;
     ///
@@ -59,7 +56,7 @@ impl<'a,'b,T,R> Maller<'a,'b,T,R>
         self.inner.get_mut(param).map(|x| x.run(param))
     }
 
-    ///Allows to get inner HashMa
+    ///Allows to get inner HashMap
     pub fn inner(self)->HashMap<T, Input<'a,'b,T,R>>{
         self.inner
     }
