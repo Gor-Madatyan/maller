@@ -38,6 +38,6 @@ fn main() {
 
 
 ## License
-This code is licensed under the `"MIT OR Unlicense"` License. 
+This code is licensed under the `"Apache-2.0 OR Unlicense"` License. 
 
 [1]:(https://docs.rs/maller)

@@ -6,7 +6,8 @@ authors=["MAKA <mmkgdev@gmail.com>"]
 keywords=["closures","matches","utilities","call"]
 categories=["rust-patterns","config","data-structures"]
 readme="README.md"
-license="MIT OR Unlicense"
+repository="https://github.com/MAKA-Rustcean/maller.git"
+license="Apache-2.0 OR Unlicense"
 edition = "2021"
 
 

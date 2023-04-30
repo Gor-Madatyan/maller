@@ -1,8 +1,8 @@
 //! Here are all the types <br>
 //! that this crate uses
 
-pub use self::maller::*;
-pub use self::input::*;
-pub  mod maller;
+pub use malller::*;
+pub use input::*;
+pub  mod malller;
 pub  mod input;
 

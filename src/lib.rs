@@ -18,7 +18,7 @@ use maller::{input, Maller};
 
     let mut maller=Maller::from_iter(
         [(898, input(c1)),
-            (500, input(c2))]
+         (500, input(c2))]
     );
 
     assert_eq!(maller.call(&898).unwrap(),2);
@@ -27,7 +27,6 @@ use maller::{input, Maller};
 
 ## License
 This code is licensed under the `"MIT OR Unlicense"` License.
-
 !*/
 
 pub use kinds::*;

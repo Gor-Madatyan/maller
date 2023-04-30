@@ -38,6 +38,7 @@ impl<'a,'b,T,R> Maller<'a,'b,T,R>
     ///else `None`
     ///
     /// # Examples
+    /// ```
     /// use maller::{input, Maller};
     /// let mut con=0;
     ///
@@ -91,24 +92,26 @@ impl<'a,'b,T,R> DerefMut for Maller<'a,'b,T,R> where
 
 
 
-impl<'a,'b,T,R> FromIterator<(T,Input<'a,'b,T,R>)> for Maller<'a,'b,T,R>
+impl<'a,'b,T,R,P> FromIterator<P> for Maller<'a,'b,T,R>
     where
-        T:Eq+Hash
+        T:Eq+Hash,
+        HashMap<T, Input<'a,'b,T,R>>:FromIterator<P>
         {
-            fn from_iter<I: IntoIterator<Item=(T, Input<'a, 'b, T, R>)>>(iter: I) -> Self {
+            fn from_iter<I: IntoIterator<Item=P>>(iter: I) -> Self {
                 Self{
                     inner:HashMap::from_iter(iter)
                 }
             }
         }
 
-impl<'a,'b,T,R> From<HashMap<T,Input<'a,'b,T,R>>> for Maller<'a,'b,T,R>
+impl<'a,'b,T,R,P> From<P> for Maller<'a,'b,T,R>
     where
-    T:Eq+Hash
+    T:Eq+Hash,
+    HashMap<T, Input<'a,'b,T,R>>:From<P>
 {
-    fn from(inner: HashMap<T, Input<'a, 'b, T, R>>) -> Self {
+    fn from(inner: P) -> Self {
         Self{
-            inner
+            inner:inner.into()
         }
     }
 }
